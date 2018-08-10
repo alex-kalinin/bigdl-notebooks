@@ -6,7 +6,7 @@ cd ~
 apt-get update --fix-missing 
 apt-get install -y wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion unzip vim
 
-wget https://repo.continuum.io/miniconda/Miniconda2-4.4.10-Linux-x86_64.sh -O ~/miniconda.sh 
+wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh 
 /bin/bash ~/miniconda.sh -b -p /opt/conda
 rm ~/miniconda.sh
 ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
@@ -34,9 +34,9 @@ wget https://d3kbcqa49mib13.cloudfront.net/${SPARK_NAME}.tgz
 tar xzf ${SPARK_NAME}.tgz
 rm ${SPARK_NAME}.tgz
 
-export BIGDL_VER=0.3.0
-export BIGDL_NAME=dist-spark-2.2.0-scala-2.11.8-linux64-${BIGDL_VER}-dist
-wget https://repo1.maven.org/maven2/com/intel/analytics/bigdl/dist-spark-2.2.0-scala-2.11.8-linux64/${BIGDL_VER}/${BIGDL_NAME}.zip
+export BIGDL_VER=0.6.0
+export BIGDL_NAME=dist-spark-2.2.0-scala-2.11.8-all-${BIGDL_VER}-dist
+wget https://repo1.maven.org/maven2/com/intel/analytics/bigdl/dist-spark-2.2.0-scala-2.11.8-all/${BIGDL_VER}/${BIGDL_NAME}.zip
 
 mkdir ${BIGDL_NAME}
 mv *.zip ${BIGDL_NAME}
