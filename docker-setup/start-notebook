@@ -8,7 +8,7 @@ export BigDL_HOME=~/dist-spark-2.2.0-scala-2.11.8-all-0.6.0-dist
 MY_PATH="`dirname \"$0\"`"
 
 export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser "
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook --allow-root --notebook-dir=./ --ip=* --no-browser --certfile=${MY_PATH}/mycert.pem --keyfile=${MY_PATH}/mykey.key"
 VERSION=0.6.0
 
 source /root/.bashrc
