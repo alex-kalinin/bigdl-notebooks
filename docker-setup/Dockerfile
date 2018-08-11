@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-WORKDIR ~
+WORKDIR /root
 RUN apt-get update --fix-missing 
 RUN apt-get install -y wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion vim unzip
 COPY install-bigdl.sh ./
