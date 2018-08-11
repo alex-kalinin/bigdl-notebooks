@@ -7,4 +7,4 @@ COPY install-bigdl.sh ./
 RUN bash -i install-bigdl.sh
 COPY start-notebook ./
 RUN git clone https://github.com/alex-kalinin/bigdl-notebooks.git
-CMD ["/root/start-notebook"]
+CMD ["/bin/bash", "-i", "/root/start-notebook"]
