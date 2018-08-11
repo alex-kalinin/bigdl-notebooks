@@ -18,6 +18,8 @@ source ~/.bashrc
 conda create -y -n py35 python=3.5
 source activate py35
 
+pip install --upgrade pip
+
 conda install -y numpy
 conda install -y pandas
 conda install -y jupyter
