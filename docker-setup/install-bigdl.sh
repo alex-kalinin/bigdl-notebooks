@@ -27,6 +27,8 @@ pip install python-mnist
 apt-get -y install apt-utils
 conda install -y -c reeder java-jdk
 
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.4.0-cp35-cp35m-linux_x86_64.whl
+
 java -version
 
 export SPARK_NAME=spark-2.2.0-bin-hadoop2.7
@@ -44,3 +46,8 @@ cd ${BIGDL_NAME}
 unzip *.zip
 rm *.zip
 cd ..
+
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem -subj "/C=US/ST=California/L=San Francisco/O=alex kalinin/CN=kalinin.co"
+
+mkdir ~/.jupyter
+mv jupyter_notebook_config.py ~/.jupyter/
