@@ -25,6 +25,7 @@ conda install -y pandas
 conda install -y jupyter
 conda install -y matplotlib
 pip install python-mnist
+pip install Image
 
 apt-get -y install apt-utils
 conda install -y -c reeder java-jdk
